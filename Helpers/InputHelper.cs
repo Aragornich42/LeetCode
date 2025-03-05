@@ -4,15 +4,13 @@
     {
         public static int[] ParseToIntArray(string? input)
         {
-            if(input is null)
-                throw new ArgumentNullException(nameof(input));
+            ArgumentNullException.ThrowIfNull(input);
 
             var inputs = input.Split(',');
             var result = new int[inputs.Length];
-            int value;
             for (int i = 0; i < inputs.Length; i++)
             {
-                if (!int.TryParse(inputs[i], out value))
+                if (!int.TryParse(inputs[i], out var value))
                     throw new Exception($"Input string {inputs[i]} has non integer symbols");
                 result[i] = value;
             }

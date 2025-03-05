@@ -1,7 +1,14 @@
-﻿using LeetCode.CustomProblems;
-using Helpers;
+﻿using Helpers;
+using LeetCode.EasyProblems;
 
-var nums = Console.ReadLine();
-var target = Console.ReadLine()!;
-var result = new Problem1().TwoSum(InputHelper.ParseToIntArray(nums), int.Parse(target));
-Console.WriteLine(string.Join(',', result));
+Console.Write("nums1: ");
+var nums1 = InputHelper.ParseToIntArray(Console.ReadLine());
+Console.Write("m: ");
+var m = int.Parse(Console.ReadLine()!);
+Console.Write("nums2: ");
+var nums2 = InputHelper.ParseToIntArray(Console.ReadLine());
+Console.Write("n: ");
+var n = int.Parse(Console.ReadLine()!);
+
+new Problem88().Merge(nums1, m, nums2, n);
+Console.WriteLine(string.Join(',', nums1));
