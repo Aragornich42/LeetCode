@@ -1,8 +1,8 @@
 ﻿using Helpers;
 using LeetCode.EasyProblems;
 
-Console.Write("prices: ");
-var nums = InputHelper.ParseToIntArray(Console.ReadLine());
+Console.Write("Roman number: ");
+var number = Console.ReadLine()!;
 
-var n = new Problem121().MaxProfit(nums);
+var n = new Problem13().RomanToInt(number);
 Console.WriteLine(n);
